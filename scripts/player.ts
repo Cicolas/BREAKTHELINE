@@ -157,10 +157,4 @@ export default class Player {
         
         return b;
     }
-
-    public Update(map: Map) {
-        if (map.GetCell(this.gridPosition.x, this.gridPosition.y) == 5 && !this.teleported) {
-            
-        }
-    }
 }
