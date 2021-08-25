@@ -12,8 +12,10 @@ export default class Player {
         
     public linkedPlayer: Player;
     public moved: boolean;
+    public canBeMoved: boolean;
 
     private teleported: boolean;
+    
 
     constructor(position: IVector, map: Map) {
         this.MoveInGrid(position, map);
@@ -30,7 +32,7 @@ export default class Player {
     }
 
     public Draw(map: Map){
-        love.graphics.rectangle("fill", this.position.x, this.position.y, map.size, map.size);
+        love.graphics.rectangle("fill", this.position.x, this.position.y, map.size, map.size, 10);
     }
 
     public Move(direction: directions, map: Map){
@@ -40,21 +42,25 @@ export default class Player {
             case directions.UP:
                 if (cell == 0 || cell == 3 || cell == 4) {
                     this.gridPosition.y--;
+                    this.canBeMoved = true;
                 }
                 break;
             case directions.RIGHT:
                 if (cell == 0 || cell == 3 || cell == 4) {
                     this.gridPosition.x++;
+                    this.canBeMoved = true;
                 }                
                 break;
             case directions.DOWN:
                 if (cell == 0 || cell == 3 || cell == 4) {
                     this.gridPosition.y++;
+                    this.canBeMoved = true;
                 }                
                 break;
             case directions.LEFT:
                 if (cell == 0 || cell == 3 || cell == 4) {
                     this.gridPosition.x--;
+                    this.canBeMoved = true;
                 }               
                 break;
             default:
@@ -96,6 +102,7 @@ export default class Player {
     }
 
     public FinishTheMoveFase(){
+        this.canBeMoved = false;
         this.moved = false;
     }
 

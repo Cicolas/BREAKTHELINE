@@ -52,21 +52,21 @@ export default class Map {
                     case 2:
                     case 0:
                         love.graphics.setColor(.9, .9, .8);
-                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size);
+                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size, 10);
                         break;
                     case 3:
                         love.graphics.setColor(.27, .27, .2);
-                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size);
+                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size, 10);
                         break;
                     case 42:
                     case 41:
                         love.graphics.setColor(195/255, 136/255, 195/255);
-                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size);
+                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size, 10);
                         break;
                     case 52:
                     case 51:
                         love.graphics.setColor(91/255, 133/255, 133/255);
-                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size);
+                        love.graphics.rectangle("fill", (x*this.size)+(this.gap*x), (y*this.size)+(this.gap*y), this.size, this.size, 10);
                         break;
                     default:
                         break;

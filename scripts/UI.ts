@@ -66,9 +66,9 @@ function CalculatePos(x: number, amplitude: number, period: number): number{
 
 function DrawLine(a: IVector, b: IVector): number[]{
     let c: number[] = [];
-    let d: number = (b.x-a.x)/10;
+    let d: number = (b.x-a.x)/20;
 
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i <= 20; i++) {
         const coeficient: number = a.x+(d*i);
         
         let v: IVector = {
